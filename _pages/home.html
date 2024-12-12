@@ -1,0 +1,131 @@
+---
+layout: basepage
+permalink: /
+---
+{% assign descript = "KatieConf is a one day, community run conference, held online." %}
+{% assign title = "KatieConf Eternal" %}
+<meta property="og:title" content="{{ title }}">
+<meta name="twitter:title" content="{{ title }}">
+<meta property="og:description" content="{{ descript }}" />
+<meta name="twitter:description" content="{{ descript }}" />
+<meta property="og:url" content="{{ page.url | prepend: site.url }}">
+<meta name="twitter:site" content="@katieconf">
+
+{% assign card = "home.png" | prepend: "/img/card/" | prepend: site.url -%}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ card }}" />
+<meta property="og:image" content="{{ card }}" />
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <hr>
+      <span class="abstract">
+        {% include calltoaction.html %}
+      </span>
+      <hr>
+    </div>
+    <div class="row">
+      <p>KatieConf is a one day, community run conference, held online.
+    </div>
+  </div>
+</div>
+</div>
+{% if site.data.speakers.size > 0 %}
+<div class="section">
+  <div class="container">
+    <div class="section-heading" style="color:black">
+      <a name="speakers"></a>
+      <h1>Speakers</h1>
+    </div>
+    {% if site.upcoming %}<h5 align="center">more to be announced!</h5>{%endif %}
+    <div class="row mb-2">
+    {% for k in site.data.speakers %}
+      {% include speaker-node.html%}
+    {% endfor %}
+
+    </div>
+
+    {% if site.upcoming %}<p align="center">We are still accepting speakers! <a href="{{site.cfp}}">Submit your presentation!</a></p>{% endif %}
+  </div>
+</div>
+
+{% endif %}
+{% if site.data.organisers > 0 %}
+<div class="section">
+  <div class="container">
+    <div class="section-heading" style="color:black">
+      <a name="organisers"></a>
+      <h2>Organisers</h2>
+    </div>
+    <div class="row">
+      {% for k in site.data.organisers %}
+      {% include speaker-node.html %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  <div class="section">
+    <div class="container">
+      <div class="section-heading" style="color:black">
+        <h1>Code of Conduct</h1>
+      </div>
+      <div class="row">
+        <p>Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of
+          gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size,
+          race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of
+          conference participants in any form. Sexual language and imagery is not appropriate for any conference venue,
+          including talks, Twitter and other online media.</p>
+        <p>We follow the JSConf/Ada Initiative Code of Conduct. A full copy of this Code is available on <a
+            href="http://confcodeofconduct.com/">ConfCodeOfConduct.com</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="container">
+    <div class="section-heading" style="color:black">
+      <h1>Tickets</h1>
+    </div>
+    <div class="row">
+      <p>KatieConf is a free, community run event.</p>
+      <p>Seats are limited, but space is plentiful. We will be able to accommodate all attendees, but recommend you bring
+        your own chair/seating.</p>
+      <p>Morning and afternoon tea will be provided thanks to the local Community Centre from which we are borrowing
+        power for our projector.</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="section">
+  <div class="container">
+    <div class="section-heading" style="color:black">
+      <h2>Diversity Statement</h2>
+    </div>
+    <div class="row">
+      <p>KatieConf is an inclusive conference.</p>
+      <p>We accept speakers whose name is derived from the root <i><a
+            href="https://en.wikipedia.org/wiki/Katherine">Katherine</a></i> and starts with either a "C" or a "K"</p>
+      <p>Unsure of your etymology? Check the <a
+          href="https://en.wikipedia.org/wiki/Katherine#Popularity_and_variations">list of variations</a>.
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="container">
+    <div class="section-heading" style="color:black">
+      <a name="about"></a>
+      <h2>About KatieConf</h2>
+    </div>
+    <div class="row">
+      <p>KatieConf is a parody. #sorrynotsorry. However, all the people featured in the KatieConf lineup <a
+          href="https://twitter.com/glasnt/status/728420940292313089">are real</a>. There are so many fantastic
+        technical presenters who <a href="https://twitter.com/tveastman/status/728423233146355712">just happened to be
+          called Katie</a>, or a variation thereupon. </p>
+      <p>If you are looking for speakers for your conference, why not ask one of the wonderful people featured here?
+        They are all listed with a social media accounts, and a link to some of their prior talks.</p>
+      <p>Do you really need another conference lineup of all men? Or as many female speakers as speakers called Dave?
+      </p>
+    </div>
+  </div>
+</div>

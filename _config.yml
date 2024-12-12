@@ -1,0 +1,28 @@
+encoding: "bom|utf-8"
+
+include:
+ - _pages
+
+exclude:
+ - README.md
+ - CNAME
+ - Gemfile
+ - Gemfile.lock
+ - new_post
+ - vendor
+
+# Is the conference upcoming? Is the CFP still open?
+# If true, it hasn't happened yet.
+upcoming: True
+
+cfp: https://docs.google.com/forms/d/e/1FAIpQLSe5yh7AqqQCRYqrcYNre3_ovvIdwrfQRtuXIpOJsijxl2baIg/viewform
+
+#- avatar: placeholder.png
+#  conference: https://katieconf.xyz
+#  id: placeholder
+#  conf: KatieConf
+#  conf_link: https://katieconf.xyz
+#  name: Place Holder
+#  social: https://katieconf.xyz
+#  title: Placeholder Talk
+#  video_link: https://youtube.com

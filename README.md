@@ -1,1 +1,1 @@
-This is just a redirect, now. 
+# KatieConf Eternal

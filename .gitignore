@@ -1,0 +1,11 @@
+# ruby/jekyll
+_site
+Gemfile.lock
+
+# python
+venv/
+
+
+# scripts
+credentials.json
+token.pickle
