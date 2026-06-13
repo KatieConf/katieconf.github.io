@@ -32,7 +32,7 @@ SAMPLE_SPREADSHEET_ID = "1_R7iXWXwoVFyiDMlivfa9oq7n2earV8AviQVyrjifbs"
 SAMPLE_RANGE_NAME = "Form Responses 1!A1:M"
 
 
-def main():
+def main(save_file):
     creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
@@ -96,15 +96,15 @@ def main():
 
     print(yaml.dump(speakers))
 
-    if sys.argv[1]:
-        save_file = sys.argv[1]
-        if Path(save_file).exists:
-            with open(sys.argv[1], 'w') as f:
-                f.write(yaml.dump(speakers))
-            print(f"Result written to {save_file}")
-        else:
-            print(f"Error: {save_file} not valid")
+    # save
+    with open(sys.argv[1], 'w') as f:
+        f.write(yaml.dump(speakers))
+    print(f"Result written to {save_file}")
 
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 1: 
+        save_file = sys.argv[1]
+    else:
+        save_file = "_data/speakers.yml"
+    main(save_file)
