@@ -2,13 +2,13 @@
 #
 # Based on the quickstart template: https://developers.google.com/sheets/api/quickstart/python
 #
-#
+# Expects an OAuth credentials.json in repo root. 
 #
 # Logic:
 #  - if the speaker submission is valid, not spam, and not already accepted
 #   - extract important data into a yaml format
 #   - download the avatar to file
-#
+#  - Save to the expected speaker file. 
 #
 # use in combination with the Makefile
 
@@ -20,7 +20,6 @@ from pathlib import Path
 
 import requests
 import yaml
-from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
